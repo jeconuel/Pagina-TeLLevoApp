@@ -4,31 +4,58 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/home.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                crossorigin="anonymous"></script>
-            <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link rel="stylesheet" href="home.css">
         <title>TeLLevoApp</title>
     </head>
-    <body>
-        <h1 class="titulo">
-            TeLLevoApp
-        </h1>
-        <h2>
-            Descarga el APK tanto para Android como IOS
-            escaneando el QR ubicando abajo.
-        </h2>
-        <img class="qr" src="assets/QR Ejemplo.png">
-        <h2>
-            Registrate usando tu RUT y olvidate de no encontrar
-            locomocion a altas horas de la noche
-        </h2>
-        <h2>
-            Lee mas sobre las caracteristicas de nuestra aplicacion
-            haciendo click aqui.
-        </h2>
+    <body onload="onLoad()">
+        <img id="tellevoapp_logo" src="assets/TeLlevoApp.png">
+        <section id="escritorio" class="info">
+            <span class="encabezado">
+                Descarga el APK tanto para Android como IOS
+                escaneando el QR ubicando abajo.
+            </span>
+            <img id="qr" src="assets/QR.svg">
+            <span>
+                Registrate usando tu RUT y olvidate de no encontrar
+                locomocion a altas horas de la noche.
+            </span>
+            <!--
+            <span style="margin: 4vh;">
+                Lee mas sobre las caracteristicas de nuestra aplicacion
+                haciendo click aqui.
+            </span>
+            -->
+        </section>
+        <section id="telefono" class="info">
+            <span class="encabezado">
+                Descarga el APK tanto para Android como IOS
+                clickeando el botón de abajo.
+            </span>
+            <div id="boton-descarga">
+                Descargar APK
+            </div>
+            <span>
+                Registrate usando tu RUT y olvidate de no encontrar
+                locomocion a altas horas de la noche.
+            </span>
+            <!--
+            <span style="margin: 4vh;">
+                Lee mas sobre las caracteristicas de nuestra aplicacion
+                haciendo click aqui.
+            </span>
+            -->
+        </section>
+        <footer>
+            <img src="assets/DuocUC.svg">
+        </footer>
     </body>
+    <script>
+        function onLoad() {
+            if (window.navigator.userAgentData.mobile) {
+                document.getElementById('telefono').style.display = 'flex';
+            } else {
+                document.getElementById('escritorio').style.display = 'flex';
+            }
+        }
+    </script>
 </html>
