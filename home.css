@@ -1,0 +1,16 @@
+#titulo{
+    height: 95%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+#qr{
+    flex-direction: column;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
